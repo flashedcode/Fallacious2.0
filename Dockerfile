@@ -19,6 +19,7 @@ RUN npm install
 
 # 复制所有源代码
 COPY . .
+RUN echo "Cache bust: $(date)"
 
 # 运行构建命令，生成 dist 文件夹
 RUN npm run build
